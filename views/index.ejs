@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Simple realtime chatroom</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Realtime Chat-Room
+            </h1>
+
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Anonymous
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input class="input" type="text" id="username" placeholder="Change your username">
+                            </div>
+                            <div class="control">
+                                <a class="button is-info" id="usernameBtn">
+                                    Change
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <article class="message">
+                <div class="message-body">
+                    <ul class="menu-list" id="message-list"></ul>
+                    <div class="info"></div>
+                </div>
+            </article>
+
+            <footer class="card-footer">
+                <div class="container">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" id="message" placeholder="Send new message">
+                        </div>
+                        <div class="control">
+                            <a class="button is-primary" id="messageBtn">
+                                Send
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="/js/chatroom.js"></script>
+</body>
+
+</html>
